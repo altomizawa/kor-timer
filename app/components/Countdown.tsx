@@ -1,16 +1,19 @@
 import React, { useEffect, useRef } from 'react'
 
 const Countdown = ({setStartTimer, setIsTimerSet}: {setStartTimer: React.Dispatch<React.SetStateAction<boolean>>, setIsTimerSet: React.Dispatch<React.SetStateAction<boolean>>}) => {
-  const [count, setCount] = React.useState<number>(3);
+  const [count, setCount] = React.useState<number>(10);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
+  
+  const play321 = () => {
     audioRef.current = new Audio('/sounds/321-robot.mp3');
     audioRef.current.play().catch(() => {});
-  }, []);
+  }
 
   useEffect(() => {
     const timer = setInterval(() => {
+      if (count === 4) {
+        play321();
+      }
       if (count === 1) {
         clearInterval(timer);
         setStartTimer(true);  
