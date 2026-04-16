@@ -22,7 +22,7 @@ const Countdown = ({setStartTimer, setIsTimerSet}: {setStartTimer: React.Dispatc
     return () => clearInterval(timer);
   }, [count, setStartTimer, setIsTimerSet]);
   return (
-    <div className='fixed top-0 left-0 w-screen h-screen text-9xl font-bold flex items-center justify-center text-[10vw]'>
+    <div className='fixed top-0 left-0 w-screen h-screen text-[40vw] lg:text-[15rem] font-bold flex items-center justify-center'>
        {count}
     </div>
   )

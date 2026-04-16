@@ -27,45 +27,43 @@ interface SetTimerMenuProps {
 
 const SetTimerMenu = ({ currentMode, rounds, setRounds, workTime, setWorkTime, restTime, setRestTime, amrapMinutes, setAmrapMinutes, emomRounds, setEmomRounds, emomIntervalMinutes, setEmomIntervalMinutes, emomIntervalSeconds, setEmomIntervalSeconds, forTimeCapMinutes, setForTimeCapMinutes, setIsTimerSet }: SetTimerMenuProps) => {
   return (
-    <div className='w-[40vw] space-y-8 flex flex-col items-center'>
+    <div className='w-[40vw] space-y-4 flex flex-col items-center'>
       {currentMode === 'TABATA' && <>
-        <div className='grid grid-cols-5'>
-          <h2 className='subtitle text-right col-span-2'>FOR:</h2>
+        <div className='flex flex-col lg:flex-row justify-center items-center w-full '>
+          <h2 className='subtitle text-center lg:text-right'>ROUNDS:</h2>
           <TimerInput value={rounds} onChange={setRounds} />
-          <h2 className='subtitle text-left col-span-2'>ROUNDS:</h2>
         </div>
-        <div className='grid grid-cols-5  '>
-          <h2 className='subtitle text-right col-span-2'>WORK:</h2>
+        <div className='flex flex-col lg:flex-row justify-center items-center w-full '>
+          <h2 className='subtitle text-center lg:text-right'>WORK:</h2>
           <TimerInput value={workTime} onChange={setWorkTime} />
-          <h2 className='subtitle text-left col-span-2'>SECONDS</h2>
+          <h2 className='subtitle text-center lg:text-right'>seconds</h2>
         </div>
-        <div className='grid grid-cols-5'>
-          <h2 className='subtitle text-right col-span-2'>REST:</h2>
+        <div className='flex flex-col lg:flex-row justify-center items-center w-full '>
+          <h2 className='subtitle text-center lg:text-right'>REST:</h2>
           <TimerInput value={restTime} onChange={setRestTime} />
-          <h2 className='subtitle text-left col-span-2'>SECONDS</h2>
+          <h2 className='subtitle text-center lg:text-right'>seconds</h2>
         </div>
       </>}
 
       {currentMode === 'AMRAP' && <>
-        <div className='grid grid-cols-5'>
-          <h2 className='subtitle text-right col-span-2'>AMRAP:</h2>
+        <div className='flex flex-col lg:flex-row justify-center items-center w-full'>
+          <h2 className='subtitle text-center lg:text-right'>AMRAP (minutes):</h2>
           <TimerInput value={amrapMinutes} onChange={setAmrapMinutes} />
-          <h2 className='subtitle text-left col-span-2'>MINUTES</h2>
         </div>
       </>}
 
       {currentMode === 'EMOM' && <>
-        <div className='grid grid-cols-5'>
+        <div className='flex flex-col lg:flex-row justify-center items-center w-full '>
           <h2 className='subtitle text-right col-span-2'>FOR:</h2>
           <TimerInput value={emomRounds} onChange={setEmomRounds} />
           <h2 className='subtitle text-left col-span-2'>ROUNDS</h2>
         </div>
-        <div className='grid grid-cols-5'>
+        <div className='flex flex-col lg:flex-row justify-center items-center w-full '>
           <h2 className='subtitle text-right col-span-2'>EVERY:</h2>
           <TimerInput value={emomIntervalMinutes} onChange={setEmomIntervalMinutes} />
           <h2 className='subtitle text-left col-span-2'>MIN</h2>
         </div>
-        <div className='grid grid-cols-5'>
+        <div className='flex flex-col lg:flex-row justify-center items-center w-full '>
           <h2 className='subtitle text-right col-span-2'></h2>
           <TimerInput value={emomIntervalSeconds} onChange={setEmomIntervalSeconds} />
           <h2 className='subtitle text-left col-span-2'>SEC</h2>
@@ -73,18 +71,18 @@ const SetTimerMenu = ({ currentMode, rounds, setRounds, workTime, setWorkTime, r
       </>}
 
       {currentMode === 'FOR TIME' && <>
-        <div className='grid grid-cols-5'>
+        <div className='flex flex-col lg:flex-row justify-center items-center w-full '>
           <h2 className='subtitle text-right col-span-2'>CAP:</h2>
           <TimerInput value={forTimeCapMinutes} onChange={setForTimeCapMinutes} />
           <h2 className='subtitle text-left col-span-2'>MINUTES</h2>
         </div>
       </>}
 
-      <Button onClick={() => {
-        setIsTimerSet(true);
-      }}>
-        START
-      </Button>
+        <Button onClick={() => {
+          setIsTimerSet(true);
+        }}>
+          START
+        </Button>
       
     </div>
   )

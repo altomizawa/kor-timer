@@ -222,7 +222,7 @@ const Timer = ({ mode, seconds, rounds, rest, amrapMinutes, emomRounds, emomInte
   return (
     <div className={`border w-screen h-screen flex flex-col items-center justify-center text-[30vw] lg:text-[15rem] font-bold`}>
       <h2>{formatTime(displayValue)}</h2>
-      <h3 className="text-8xl">
+      <h3 className="text-[10vw] lg:text-8xl">
         {timerLabel()}
       </h3>
       {isRest && <h3 className="text-6xl">REST</h3>}
