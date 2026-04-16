@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KOR Counter
+
+KOR Counter is a workout timer app built for interval-based training sessions.
+
+It supports the most common training formats used in functional fitness:
+
+- TABATA
+- AMRAP
+- EMOM
+- FOR TIME
+
+## Features
+
+- Mode selection screen for all supported workout formats.
+- Configurable setup form per mode before starting the timer.
+- 3-2-1 pre-start countdown.
+- Running timer with round/phase labels.
+- Audio cues:
+  - 3-2-1 voice cue near transitions.
+  - Repeated times-up sound when the workout ends.
+- Responsive typography and layout for desktop and mobile.
+
+## Workout Modes
+
+### TABATA
+
+- Configure rounds, work seconds, and rest seconds.
+- Timer alternates between WORK and REST phases.
+
+### AMRAP
+
+- Configure total workout minutes.
+- Timer counts down until time reaches zero.
+
+### EMOM
+
+- Configure total rounds and interval duration (minutes + seconds).
+- Timer resets every interval and advances rounds automatically.
+
+### FOR TIME
+
+- Configure an optional time cap in minutes.
+- Timer counts up elapsed time.
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- lucide-react (icons)
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+	npm install
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+	npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Open:
 
-## Learn More
+	http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+## Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- npm run dev: starts the local dev server.
+- npm run build: creates a production build.
+- npm run start: runs the production server.
+- npm run lint: runs ESLint checks.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+- app/page.tsx: app entry and mode switching.
+- app/components/Menu.tsx: workout mode selection.
+- app/components/SetTimerMenu.tsx: mode-specific timer setup form.
+- app/components/Countdown.tsx: pre-start countdown screen.
+- app/components/Timer.tsx: main workout timer logic and controls.
+- public/sounds/: audio assets used by countdown and finish cues.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Sound playback depends on browser autoplay policies and user interaction.
+- FOR TIME supports zero cap (open-ended count-up).
