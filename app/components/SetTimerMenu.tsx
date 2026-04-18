@@ -55,17 +55,17 @@ const SetTimerMenu = ({ currentMode, rounds, setRounds, workTime, setWorkTime, r
 
       {currentMode === 'EMOM' && <>
         <div className='grid grid-cols-3 gap-4 justify-items-center items-center w-full'>
-          <Typo variant="subtitle">FOR:</Typo>
+          <Typo variant="subtitle">FOR</Typo>
           <TimerInput value={emomRounds} onChange={setEmomRounds} />
           <Typo variant="subtitle">ROUNDS</Typo>
         </div>
         <div className='grid grid-cols-3 gap-4 justify-items-center items-center w-full'>
-          <Typo variant="subtitle">EVERY:</Typo>
+          <Typo variant="subtitle">EVERY</Typo>
           <TimerInput value={emomIntervalMinutes} onChange={setEmomIntervalMinutes} />
           <Typo variant="subtitle">MIN</Typo>
         </div>
         <div className='grid grid-cols-3 gap-4 justify-items-center items-center w-full'>
-          <Typo variant="subtitle"></Typo>
+          <Typo variant="subtitle">AND</Typo>
           <TimerInput value={emomIntervalSeconds} onChange={setEmomIntervalSeconds} />
           <Typo variant="subtitle">SEC</Typo>
         </div>
