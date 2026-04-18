@@ -5,7 +5,7 @@ const Countdown = ({setStartTimer, setIsTimerSet}: {setStartTimer: React.Dispatc
   const audioRef = useRef<HTMLAudioElement | null>(null);
   
   const play321 = () => {
-    audioRef.current = new Audio('/sounds/321-robot.mp3');
+    audioRef.current = new Audio('/sounds/321-beep_2.mp3');
     audioRef.current.play().catch(() => {});
   }
 

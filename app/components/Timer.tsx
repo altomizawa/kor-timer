@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 
-const play321 = () => { new Audio('/sounds/321-robot.mp3').play().catch(() => {}); };
+const play321 = () => { new Audio('/sounds/321-beep_2.mp3').play().catch(() => {}); };
 const playTimesUp = () => {
   const audio = new Audio('/sounds/timesup.mp3');
   let count = 0;
