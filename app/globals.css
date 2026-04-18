@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #b22222;
+  --background: #ED7014;
   --foreground: #FFFFFF;
 }
 
@@ -52,11 +52,11 @@ body {
 
 
 .subtitle {
-  @apply text-4xl uppercase px-8 py-4 font-semibold tracking-wide cursor-pointer
+  @apply text-4xl uppercase font-semibold tracking-wide
 }
 
 .logo {
-  @apply text-[10vw] font-bold opacity-0;
+  @apply w-3/4 h-auto mx-auto;
   animation: showLogo 4s ease-in-out;
 }
 

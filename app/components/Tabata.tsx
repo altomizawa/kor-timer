@@ -24,9 +24,9 @@ const Tabata = ({ currentMode, setCurrentMode }: { currentMode: TimerMode; setCu
 
   return (
     <div>
-      <button onClick={() => setCurrentMode(null)} className='fixed top-4 left-12 w-full flex items-center  cursor-pointer'>
+      <button onClick={() => setCurrentMode(null)} className='fixed top-4 left-12 w-full flex items-center cursor-pointer z-100'>
         <ArrowLeftCircle size={48} />
-        <p className='subtitle text-left'>{currentMode}</p>
+        <p className='subtitle text-left ml-6'>{currentMode}</p>
 
       </button>
       {!isTimerSet && !startTimer && <SetTimerMenu currentMode={currentMode} rounds={rounds} setRounds={setRounds} workTime={workTime} setWorkTime={setWorkTime} restTime={restTime} setRestTime={setRestTime} amrapMinutes={amrapMinutes} setAmrapMinutes={setAmrapMinutes} emomRounds={emomRounds} setEmomRounds={setEmomRounds} emomIntervalMinutes={emomIntervalMinutes} setEmomIntervalMinutes={setEmomIntervalMinutes} emomIntervalSeconds={emomIntervalSeconds} setEmomIntervalSeconds={setEmomIntervalSeconds} forTimeCapMinutes={forTimeCapMinutes} setForTimeCapMinutes={setForTimeCapMinutes} setIsTimerSet={setIsTimerSet} />}

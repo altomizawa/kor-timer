@@ -227,7 +227,6 @@ const Timer = ({ mode, seconds, rounds, rest, amrapMinutes, emomRounds, emomInte
       </h3>
       {isRest && <h3 className="text-6xl">REST</h3>}
       {isFinished && <h3 className="text-4xl">DONE</h3>}
-
       <div className="flex gap-4 mt-12">
         <Button onClick={() => (isRunning ? setIsRunning(false) : startTimer())} variant="primary">
           {isRunning ? "STOP" : "START"}

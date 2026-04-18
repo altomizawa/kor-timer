@@ -12,7 +12,7 @@ const TimerInput = ({ value, onChange }: { value: number; onChange: (value: numb
   };
 
   return (
-    <input className='subtitle text-center w-42 border-2 overflow-hidden'type="number" maxLength={3} min={0} value={value} onChange={(e) => handleChange(e.target.value)} onClick={(e) => e.currentTarget.select()} />
+    <input className='text-4xl w-32 md:w-42 text-center border-2 overflow-hidden'type="number" maxLength={3} min={0} value={value} onChange={(e) => handleChange(e.target.value)} onClick={(e) => e.currentTarget.select()} />
   )
 }
 

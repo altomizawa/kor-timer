@@ -14,7 +14,7 @@ const Welcome = () => {
   return (
     <>
       {showWelcome && <div className='fixed top-0 left-0 w-screen h-screen z-10 bg-background grid place-content-center gap-4'>
-        <Image src="/kor-white.svg" alt="Logo" width={400} height={400} className='logo' />
+        <Image src="/kor-white.svg" alt="Logo" width={400} height={400} className='logo' loading="eager" />
       </div>}
     </>
   )
